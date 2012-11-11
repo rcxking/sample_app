@@ -13,6 +13,7 @@ group :development, :test do
 	gem 'guard-rspec', '1.2.1'
 	gem 'spork', '0.9.2'
 	gem 'guard-spork'
+	gem 'factory_girl_rails', '4.1.0'
 end
 
 gem 'annotate', '2.5.0', group: :development
@@ -31,6 +32,7 @@ group :test do
 	gem 'capybara', '1.1.2'
 	gem 'rb-inotify', '0.8.8'
 	gem 'libnotify', '0.5.9'
+	gem 'factory_girl_rails', '4.1.0'
 end
 
 # Heroku uses PostgreSQL, so include the gem here

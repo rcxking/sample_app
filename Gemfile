@@ -14,6 +14,9 @@ group :development, :test do
 	gem 'spork', '0.9.2'
 	gem 'guard-spork'
 	gem 'factory_girl_rails', '4.1.0'
+
+	gem 'cucumber-rails', '1.2.1', :require => false
+	gem 'database_cleaner', '0.7.0'
 end
 
 gem 'annotate', '2.5.0', group: :development
@@ -33,6 +36,8 @@ group :test do
 	gem 'rb-inotify', '0.8.8'
 	gem 'libnotify', '0.5.9'
 	gem 'factory_girl_rails', '4.1.0'
+	gem 'cucumber-rails', '1.2.1', :require => false
+	gem 'database_cleaner', '0.7.0'
 end
 
 # Heroku uses PostgreSQL, so include the gem here

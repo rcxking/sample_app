@@ -16,6 +16,9 @@ class User < ActiveRecord::Base
 	# Convert the user's email to lowercase
 	before_save { self.email.downcase! }	
 
+	# Create a remember token
+	before_save :create_remember_token
+
 	# Ensure that a User has entered a name that is 50 or less chars long
 	validates :name, presence: true, length: { maximum: 50 }
 
@@ -29,4 +32,9 @@ class User < ActiveRecord::Base
 
 	validates :password, length: { minimum: 6 }
 	validates :password_confirmation, presence: true
+
+	private
+		def create_remember_token
+			self.remember_token = SecureRandom.urlsafe_base64
+		end
 end
